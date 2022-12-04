@@ -40,11 +40,15 @@ public class Main
 		for(int i = 0; i < table.length; i++) 
 		{
 			System.out.println("table: ");
+			long start = System.currentTimeMillis();
 			for(int j = 0; j < 100; j++)
 			{
 				Object result = table[i].search(keys[j]);
 				System.out.println(result);
 			}
+			long stop = System.currentTimeMillis();
+			long time = stop - start;
+			System.out.println("search time: " + time);
 		}
 	}
 }

@@ -22,7 +22,7 @@ public class Main
 		//into keys[] and values[]
 		for(int i = 0; i < 10000; i++) 
 		{
-				int key = rand.nextInt(0, 1000000);
+				int key = rand.nextInt(0, 100000);
 				keys[i] = key;
 				values[i] = key;
 		}
@@ -39,9 +39,9 @@ public class Main
 		//searches each hash table for first 100 values in keys[]
 		for(int i = 0; i < table.length; i++) 
 		{
-			System.out.println("table: ");
+			System.out.println("table: " + i);
 			long start = System.currentTimeMillis();
-			for(int j = 0; j < 100; j++)
+			for(int j = 0; j < 3; j++)
 			{
 				Object result = table[i].search(keys[j]);
 				System.out.println(result);
